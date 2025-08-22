@@ -1,0 +1,31 @@
+{
+  "name": "projeto_canil",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --import=tsx --watch ./src/server.ts",
+    "start-dev": "nodemon -e ts,json,mustache ./src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcos-ViniciusDEV/Projeto_canil.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcos-ViniciusDEV/Projeto_canil/issues"
+  },
+  "homepage": "https://github.com/Marcos-ViniciusDEV/Projeto_canil#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  }
+}
