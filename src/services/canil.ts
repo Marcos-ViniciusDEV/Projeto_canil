@@ -1,16 +1,16 @@
 import { readFile, writeFile } from "fs/promises";
 import * as path from "path";
 
-type produto = {
-  type: string;
+type pet = {
+  type: "dog" | "cat" | "fish";
   image: string;
   name: string;
   color: string;
-  sex: string;
+  sex: "Musculino" | "Feminino";
 };
 
 export const manipulacaoJSON = async () => {
-  let list: produto[] = [];
+  let list: pet[] = [];
 
   try {
     const DataFile = path.resolve(__dirname, "../../data/list.json");

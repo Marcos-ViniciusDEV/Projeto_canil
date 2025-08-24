@@ -2,6 +2,7 @@ import express from "express";
 import * as pageController from "../controllers/PageController";
 import * as searchController from "../controllers/searchController";
 import manipulacaoJSON from "../services/canil";
+import { Pet } from "../models/pets";
 
 export const router = express.Router();
 
@@ -25,4 +26,9 @@ router.get("/teste", async (req, res) => {
   }
 });
 
+const listao = async () => {
+  const listaAll = await Pet.getFromName("P");
+};
+
+listao();
 export default router;
