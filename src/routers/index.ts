@@ -1,6 +1,8 @@
 import express from "express";
 import * as pageController from "../controllers/PageController";
 import * as searchController from "../controllers/searchController";
+import manipulacaoJSON from "../services/canil";
+
 export const router = express.Router();
 
 router.get("/", pageController.home);
@@ -12,6 +14,15 @@ router.get("/search", searchController.search);
 
 router.get("/ping", (req, res) => {
   res.json({ ping: true });
+});
+
+router.get("/teste", async (req, res) => {
+  try {
+    const myList = await manipulacaoJSON();
+    res.json(myList);
+  } catch (err) {
+    res.json({ err: err });
+  }
 });
 
 export default router;
