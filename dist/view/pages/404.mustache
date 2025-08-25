@@ -1,0 +1,20 @@
+
+{{>partials/header}}
+
+{{#banner}}
+<section class="banner" style="background-image: url('images/{{ backgroud }}')">{{ title }}</section>
+<h2>{{ title }} disponíveis para adoção</h2>
+{{/banner}}
+  
+<div class="container list">
+ 
+</div>
+
+{{^myList}}
+<div class="conteiner no-list">
+  <h2>Pagina nao encontrada</h2>
+</div>
+{{/myList}}
+
+
+{{>partials/footer}}
